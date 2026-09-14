@@ -26,6 +26,7 @@ from typing import Dict, Optional
 
 import aiofiles
 import discord
+import audioop 
 from discord.ext import commands
 from dotenv import load_dotenv
 
