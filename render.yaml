@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: discord-deobfuscate-bot
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false   # set in the Render dashboard, never in the repo
+    healthCheckPath: /healthz
